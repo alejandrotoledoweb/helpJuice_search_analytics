@@ -11,14 +11,30 @@ export default class extends Controller {
   }
 
   handleChange(event) {
+    let input = event.target
     Rails.ajax({
       url: this.urlValue,
-      type: "SEARCH",
+      type: "POST",
       data: new FormData(this.formTarget),
       success: (data) => {
         this.outputTarget.innerHTML = data;
+        input = document.getElementById(input.id);
+        this.moveCursorToEnd(input);
       },
     })
+  }
+
+  // https://css-tricks.com/snippets/javascript/move-cursor-to-end-of-input/
+  moveCursorToEnd(element) {
+    if (typeof element.selectionStart == "number") {
+      element.focus();
+      element.selectionStart = element.selectionEnd = element.value.length;
+    } else if (typeof element.createTextRange != "undefined") {
+      element.focus();
+      var range = element.createTextRange();
+      range.collapse(false);
+      range.select();
+    }
   }
 
 }
