@@ -13,10 +13,10 @@
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_field :description, data: { action: "form-validation#handleChange" } %>
+    <%= form.text_field :description, data: { action: "form-validation#handleChange", class: 'description' } %>
   </div>
 
   <div class="actions">
-    <%= form.submit disabled: search.errors.any? %>
+    <%= form.submit disabled: search.errors.any?, class: "submit" %>
   </div>
 <% end %>
