@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "searches#index"
   resources :searches
   namespace :form_validations do
     resources :searches, only: %i[create update]
