@@ -1,0 +1,2 @@
+module FormValidations::SearchesHelper
+end
