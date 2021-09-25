@@ -8,3 +8,5 @@
 10.times do
   Search.create description: Faker::Company.catch_phrase
 end
+
+Search.create(description: 'What is a good car?')

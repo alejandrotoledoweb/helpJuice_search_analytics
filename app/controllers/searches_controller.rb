@@ -3,7 +3,7 @@ class SearchesController < ApplicationController
 
   # GET /searches or /searches.json
   def index
-    @searches = Search.all
+    @searches = Search.complete_questions(Search.all)
   end
 
   # GET /searches/1 or /searches/1.json
