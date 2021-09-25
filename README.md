@@ -3,9 +3,19 @@
 this project was part of a challenge from HelpJuice Company.
 The features of the project is to build a search application for Articles where you can see the search trends from other users.
 
+# Features
+
+## Realtime validation
+
+When you start typing for a search the first filter for the search works in real time without clicking the "Create Search" button. The validation work according to the validation of the Search Model.
+
+## Displaying all the Searches
+
+The searches are displayed on the root page. The second filter works with the elasticsearch database. Taking the questions or sentences filter by the complete questions method in the searchable.rb file coming from the elasticsearch Model methods.
+
 ## Images
 
-![screenshot](./app/assets/images/screenshot-1-capstone.png)
+![screenshot](app/assets/images/search_errors.png)
 
 ## Built and tested With
 
@@ -16,13 +26,17 @@ The features of the project is to build a search application for Articles where 
 
 ## Live demo link
 
-Visit the live demo [link]()
+Visit the live demo [link](https://helpjuice-app.herokuapp.com/)
 
 ## Setup
 
 Download the repo with this command
 
 `git clone git@github.com:alejandrotoledoweb/helpJuice_search_analytics.git`
+
+`cd helpJuice_search)analytics`
+
+`git checkout feature-app` 
 
 Install the Gems and Dependencies
 
