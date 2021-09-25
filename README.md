@@ -89,7 +89,3 @@ Give a ⭐️ if you like this project!
 
 This project is [MIT](https://opensource.org/licenses/MIT) licensed.
 
-
-* Deployment instructions
-
-* ...
