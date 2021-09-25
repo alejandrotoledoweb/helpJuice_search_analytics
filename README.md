@@ -34,7 +34,7 @@ Download the repo with this command
 
 `git clone git@github.com:alejandrotoledoweb/helpJuice_search_analytics.git`
 
-`cd helpJuice_search)analytics`
+`cd helpJuice_search_analytics`
 
 `git checkout feature-app` 
 
