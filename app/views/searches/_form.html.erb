@@ -1,0 +1,22 @@
+<%= form_with(model: search, data: { form_validation_target: "form" }) do |form| %>
+  <% if search.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(search.errors.count, "error") %> prohibited this search from being saved:</h2>
+
+      <ul>
+        <% search.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, data: { action: "form-validation#handleChange", class: 'description' } %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit disabled: search.errors.any?, class: "submit" %>
+  </div>
+<% end %>

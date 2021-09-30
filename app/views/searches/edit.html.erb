@@ -1,0 +1,8 @@
+<h1>Editing Search</h1>
+
+<div data-controller="form-validation" data-form-validation-target="output" data-form-validation-url-value="<%= form_validations_searches_path %>">
+  <%= render 'form', search: @search %>
+</div>
+
+<%= link_to 'Show', @search %> |
+<%= link_to 'Back', searches_path %>
